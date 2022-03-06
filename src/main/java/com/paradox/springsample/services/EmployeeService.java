@@ -11,9 +11,9 @@ public class EmployeeService {
         Employee employee = new Employee();
         employee.setEmpId(empId);
         employee.setName(name);
-        oneparam("");
-        twoparam("", "x");
-        threeparam("a", "b", "c");
+        Employee a = oneparam("");
+        Employee b = twoparam("", "x");
+        Employee c = threeparam("a", "b", "c");
         return employee;
     }
 
@@ -22,17 +22,20 @@ public class EmployeeService {
     }
 
     @LogMetrics
-    public void oneparam(String a) {
-
+    public Employee oneparam(String a) {
+        System.out.println("one param");
+        return new Employee();
     }
 
     @LogMetrics
-    public void twoparam(String a, String b) {
-
+    public Employee twoparam(String a, String b) {
+        System.out.println("two param");
+        return new Employee();
     }
 
     @LogMetrics
-    public void threeparam(String a, String b, String c) {
-
+    public Employee threeparam(String a, String b, String c) {
+        System.out.println("three param");
+        return new Employee();
     }
 }

@@ -20,4 +20,14 @@ public class EmployeeServiceAspect {
 //        System.out.println("Created employee !!");
 //        return value;
     }
+
+    @Before(value = "execution(* com.paradox.springsample.services.EmployeeService.*(..))")
+    public void beforeAdvice2(JoinPoint proceedingJoinPoint) throws Throwable {
+        System.out.println("Before method2:: "+proceedingJoinPoint.getSignature());
+        System.out.println("Creating employee with name2:: ");
+//        Object value = proceedingJoinPoint.proceed();
+//        System.out.println("After method:: "+proceedingJoinPoint.getSignature());
+//        System.out.println("Created employee !!");
+//        return value;
+    }
 }
